@@ -1,0 +1,9 @@
+FROM python:3.13-slim
+
+WORKDIR /usr/src/app
+
+RUN pip install --no-cache-dir psycopg2-binary
+
+COPY ping-pong.py .
+
+CMD ["python3", "ping-pong.py"]
